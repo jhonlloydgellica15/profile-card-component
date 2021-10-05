@@ -1,0 +1,129 @@
+:root {
+  /* Colors */
+  --dark-cyan: hsl(185, 75%, 39%);
+  --desaturated-blue: hsl(229, 23%, 23%);
+  --grayish-blue: hsl(227, 10%, 46%);
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+  font-family: "Kumbh Sans", sans-serif;
+}
+p {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.container {
+  height: 100vh;
+  background: var(--dark-cyan);
+  color: var(--desaturated-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.top-bg {
+  position: absolute;
+  background: url(../images/bg-pattern-top.svg);
+  width: 978px;
+  height: 978px;
+  top: -40rem;
+  left: -70rem;
+}
+
+.bottom-bg {
+  position: absolute;
+  background: url(../images/bg-pattern-bottom.svg);
+  width: 978px;
+  height: 978px;
+  bottom: -45rem;
+  right: -70rem;
+}
+.card {
+  background: white;
+  width: 350px;
+  height: 400px;
+  z-index: 1;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.card .bg-img {
+  background: url("../images/bg-pattern-card.svg");
+  height: 140px;
+}
+
+.profile-info {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.profile .pic {
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%);
+  border-radius: 50%;
+  padding: 5px;
+  top: 0;
+  background: white;
+  top: 90px;
+}
+.profile .pic img {
+  border-radius: 50%;
+}
+
+.profile .name {
+  margin-bottom: 0;
+}
+.profile .name span {
+  color: var(--desaturated-blue);
+}
+
+.profile .location {
+  font-size: 1.3rem;
+  font-weight: normal;
+  margin: 0.3 rem 0;
+}
+
+.profile {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 10px;
+  color: var(--grayish-blue);
+}
+
+.stats {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  padding-top: 4rem;
+}
+.stats p {
+  margin: 0;
+}
+.stats .normal {
+  font-weight: normal;
+  font-size: 1.2rem;
+  color: var(--grayish-blue);
+}
+
+@media screen and (min-width: 1440px) {
+  .top-bg {
+    top: -40rem;
+    left: -5rem;
+  }
+  .bottom-bg {
+    bottom: -45rem;
+    right: -5rem;
+  }
+}
